@@ -1,0 +1,27 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+@import url(../node_modules/normalize.css/normalize.css);
+/* Some Base CSS Rules */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0; }
+
+body {
+  font-family: Arial, sans-serif; }
+
+.clearfix:after,
+.clearfix:before {
+  display: table;
+  content: " "; }
+
+.clearfix:after {
+  clear: both; }

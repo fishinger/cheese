@@ -12,7 +12,8 @@ html, body {
 }
 
 body {
-	font-family: Arial, sans-serif;
+	font-family: $arno-display;
+	font-weight: 400;
 	//font-size: 62.5%;
 }
 
@@ -23,4 +24,8 @@ body {
 }
 .clearfix:after{
 	clear: both;
+}
+
+input:focus, a:focus, img:focus, textarea:focus{
+	outline: none;
 }

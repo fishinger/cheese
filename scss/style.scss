@@ -1,38 +1,483 @@
-/* Welcome to Compass.
- * In this file you should write your main styles. (or centralize your imports)
- * Import this file using the following HTML or equivalent:
- * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
 @import "../node_modules/normalize.css/normalize.css";
+@import "../fonts/fonts.css";
+@import "variables.scss";
+@import "mixins.scss";
 @import "base";
-//@import "fonts/fonts.css";
-//@import "compass/css3";
-//@import "social/*.png"; //папка с иконками
 
-// добавление спрайтов
-//$social-sprite-dimensions: true; //добавляет высоту и ширину
-// $social: ever,
-// 		micro,
-// 		google,
-// 		fire,
-// 		sony;
-// @each $item in $social{
-// 	li.#{$item}{
-// 		background: url(../img/social-s1f93d0a929.png);
-// 		@include social-sprite(#{$item});
-// 	}
-// }	
-
-//@include span(12); //количество столбцов
-//@include span(4 last); //отменяет правый отступ
-//@include push(1); //смещение
-//@extend .clearfix; //отмена обтекания
-
-@mixin b($name, $r){
-	background: url(../img/#{$name}.#{$r}) 0 0 no-repeat;
+.container{
+	width: 1000px;
+	margin: auto;
 }
-$xs: "max-width: 768px";
-$sm: "max-width: 992px";
-$md: "max-width: 1999px";
-$lg: "min-width: 1200px";
+header{
+	background: #fff;
+}
+.header__top{
+	min-height: 62px;
+	border-bottom: 1px dotted #545454;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+.header__name,
+.header__phone{
+	color: #5c5754;
+	font-size: 19px;
+	line-height: 32px;
+	border-right: 1px dotted #545454;
+	float: left;
+}
+.header__name{
+	padding-right: 24px;
+}
+.header__phone{
+	padding-right: 24px;
+	padding-left: 24px;
+}
+.header__search{
+	float: right;
+	position: relative;
+	button{
+		width: 16px;
+		height: 16px;
+		display: block;
+		@include b(search, png);
+		background-size: contain;
+		border: none;
+		outline: none;
+		position: absolute;
+		right: 14px;
+		top: 50%;
+		margin-top: -8px;
+	}
+	.control{
+		padding-right: 35px;
+	}
+}
+.control{
+	height: 28px;
+	line-height: 31px;
+	border-radius: 28px;
+	border: 1px solid #c4c4c4;
+	background: #fff;
+	padding: 0 15px; 
+}
+.nav{
+	padding: 16px 0 13px;
+}
+.nav__list{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	list-style: none;
+	padding-left: 0;
+	margin: 0;
+}
+.nav__link{
+	color: black;
+	font-family: $oran;
+	font-size: 16px;
+	line-height: 30px;
+	text-transform: uppercase;
+	text-decoration: none;
+	transition: all .3s;
+	&:hover{
+		opacity: .8;
+	}
+}
+main{
+	background: url(../img/bg.jpg) 0 0 repeat;
+	padding: 77px 0 55px 0;
+}
+.about{
 
+}
+.about__top{
+	position: relative;
+	margin-bottom: 40px;
+	&:after{
+		content: '';
+		position: absolute;
+		display: block;
+		bottom: -30px;
+		left: 50%;
+		width: 169px;
+		height: 164px;
+		@include b(chesnok, png);
+	}
+}
+.about__slogan{
+	max-width: 560px;
+	float: left;
+}
+.about__ch1{
+	max-width: 400px;
+	float: right;
+	position: relative;
+	top: 57px;
+}
+.about__bottom{
+	@extend .clearfix;
+	position: relative;
+}
+.ch3{
+	position: absolute;
+	left: -67px;
+	top: 10px;
+	max-width: 490px;
+	z-index: 10;
+}
+.about__info{
+	float: right;
+	margin-right: -40px;
+	position: relative;
+	max-width: 700px;
+	&:before{
+		content: '';
+		position: absolute;
+		display: block;
+		top: -83px;
+		right: -50px;
+		width: 258px;
+		height: 251px;
+		@include b(ch2, png);
+		z-index: 10;
+	}
+	&:after{
+		content: '';
+		position: absolute;
+		display: block;
+		right: -84px;
+		bottom: -111px;
+		width: 280px;
+		height: 212px;
+		@include b(ch4, png);
+	}
+}
+.about{
+	
+}
+.info{
+	background: url(../img/info-bg.jpg) 0 0 repeat;
+	padding: 15px;
+}
+.info__wrap{
+	border: 1px solid #bbb;
+	position: relative;
+	padding: 50px 55px 30px 80px;
+	&:before{
+		content: '';
+		position: absolute;
+		top: 3px;
+		left: 3px;
+		right: 3px;
+		bottom: 3px;
+		border: 2px solid #bbb;
+	}
+}
+.info__title{
+	color: #5c5754;
+	font-family: $oran;
+	font-size: 32px;
+	line-height: 30px;
+	text-transform: uppercase;
+	position: relative;
+	margin-bottom: 30px;
+	margin-left: -45px;
+	margin-top: 0;
+	display: flex;
+	align-items: center;
+	&:after{
+		content: '';
+		@include b(venzel, png);
+		display: inline-block;
+		width: 32px;
+		height: 12px;
+		margin-left: 15px;
+	}
+}
+.info__text{
+	color: #5c5754;
+	font-family: Georgia, sans-serif;
+	font-size: 18px;
+	font-style: italic;
+	line-height: 32px;
+	margin-bottom: 35px;
+}
+.info_footer{
+	padding-top: 30px;
+	border-top: 1px solid #919191;
+}
+.section__title{
+	text-align: center;
+	margin-bottom: 30px;
+	img{
+		display: inline-block;
+	}
+}
+.view{
+	padding-top: 100px;
+}
+.view_decor{
+	position: relative;
+	&:before{
+		content: '';
+		position: absolute;
+		width: 166px;
+		height: 223px;
+		display: block;
+		left: -170px;
+		top: -186px;
+		@include b(pom1, png);
+	}
+	&:after{
+		content: '';
+		position: absolute;
+		width: 119px;
+		height: 118px;
+		display: block;
+		right: -130px;
+		bottom: -26px;
+		@include b(pom2, png);
+	}
+}
+.view__row{
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 40px;
+}
+.view__item{
+
+}
+.cheese{
+	width: 295px;
+	height: 397px;
+	padding: 12px;
+	border-radius: 295px;
+	background: url(../img/view-bg.jpg) 0 0 repeat;
+	box-shadow: 10px 10px 10px rgba(0,0,0, .4);
+	position: relative;
+	cursor: pointer;
+	overflow: hidden;
+	&:hover .cheese__hover{
+		top: 0;
+	}
+}
+.cheese__img{
+	border-radius: 50%;
+	overflow: hidden;
+	max-width: 100%;
+	margin-bottom: 18px;
+	position: relative;
+	width: 271px;
+	height: 271px;
+	img{
+		max-width: 100%;
+		border-radius: 50%;
+	}
+	&:before{
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		border-radius: 50%;
+		box-shadow:inset 0 0 0 9px rgba(255, 255, 255, .5);
+	}
+}
+.cheese__name{
+	font-family: $oran;
+	font-size: 17px;
+	line-height: 25px;
+	text-transform: uppercase;
+	text-align: center;
+	color: #84061a;
+}
+.cheese__hover{
+	position: absolute;
+	top: 100%;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: #f2d881;
+	text-align: center;
+	padding: 100px 17px 17px 17px;
+	transition: all .4s;
+	border-radius: 295px;
+	z-index: 10;
+}
+.cheese__hover-name{
+	color: #84061a;
+	font-family: $oran;
+	font-size: 17px;
+	line-height: 25px;
+	text-transform: uppercase;
+	position: relative;
+	padding-bottom: 24px;
+	margin-bottom: 10px;
+	&:after{
+		content: '';
+		position: absolute;
+		width: 44px;
+		height: 1px;
+		bottom: 0;
+		left: 50%;
+		margin-left: -22px;
+		background: #433021;
+	}
+}
+.cheese__info{
+	color: #433021;
+	font-size: 18px;
+	font-style: italic;
+	line-height: 22px;
+}
+
+.recipe{
+	padding-top: 50px;
+	padding-bottom: 130px;
+}
+.title-recipe{
+	position: relative;
+	&:after{
+		content: '';
+		position: absolute;
+		bottom: -10px;
+		left: 50%;
+		margin-left: -367px;
+		width: 97px;
+		height: 93px;
+		display: block;
+		@include b(list, png);
+	}
+	&:before{
+		content: '';
+		position: absolute;
+		bottom: -60px;
+		left: 50%;
+		margin-left: -290px;
+		width: 85px;
+		height: 82px;
+		display: block;
+		@include b(sol, png);
+	}
+}
+.recipe__wrap{
+	background: url(../img/recipe-bg.jpg) 0 0 repeat;
+	height: 215px;
+	position: relative;
+	margin-top: 105px;
+	&:before{
+		content: '';
+		position: absolute;
+		top: 50%;
+		margin-top: -220px;
+		left: 50%;
+		margin-left: -220px;
+		height: 440px;
+		width: 440px;
+		border-radius: 50%;
+		background: url(../img/recipe-bg.jpg) 0 0 repeat;
+	}
+}
+.recipe__decor{
+	position: relative;
+	&:before{
+		content: '';
+		position: absolute;
+		top: 0;
+		left: -100px;
+		width: 123px;
+		height: 241px;
+		display: block;
+		@include b(specii, png);
+	}
+	&:after{
+		content: '';
+		position: absolute;
+		top: -75px;
+		right: -193px;
+		width: 154px;
+		height: 363px;
+		display: block;
+		@include b(klmn, png);
+	}
+	.bx-wrapper{
+		margin: auto;
+		position: relative;
+		top: -35px;
+		left: 27px;
+	}
+	.bx-prev, .bx-next{
+		position: absolute;
+		top: 118px;
+	}
+	.bx-prev{
+		left: -21px;
+	}
+	.bx-next{
+		right: 37px;
+	}
+}
+.bx-prev, .bx-next{
+	width: 46px;
+	height: 46px;
+	display: inline-block;
+	background-color: #eccb5e;
+	border-radius: 50%;
+	transition: all .3s;
+	background-position: center center;
+	background-repeat: no-repeat;
+	&:hover{
+		background-color: #b8182e;
+	}
+}
+.bx-prev{
+	background-image: url(../img/ico-dir.png);
+	transform: rotate(180deg);
+}
+.bx-next{
+	background-image: url(../img/ico-dir.png);
+}
+.slider1{
+	.slide{
+
+	}
+}
+.recipe__img{
+	@include b(recipe-decor, png);
+	width: 354px;
+	height: 332px;
+	img{
+		border-radius: 50%;
+		width: 222px;
+		height: 222px;
+		position: relative;
+		top: 25px;
+		left: 25px;
+	}
+}
+.recipe__info{
+	padding: 20px 20px;
+	color: #3c3c3c;
+	font-size: 20px;
+	line-height: 22px;
+	text-align: center;
+	position: relative;
+	width: 270px;
+	margin: 0 auto;
+	background: #fff;
+	top: -24px;
+	left: -30px;
+	&:before{
+		content: '';
+		position: absolute;
+		left: 50%;
+		margin-left: -5px;
+		bottom: 100%;
+		border: 10px solid transparent;
+		border-bottom: 10px solid #fff;
+		
+	}
+}

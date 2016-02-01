@@ -13,4 +13,15 @@ $(document).ready(function(){
  //    	}
  //    });
     /*--end-fancybox--*/
+
+	$('.slider1').bxSlider({
+		slideWidth: 354,
+		minSlides: 3,
+		maxSlides: 3,
+		slideMargin: 5,
+		pager: false,
+		nextText: '',
+		prevText: '',
+		moveSlides: 1
+	});
 })

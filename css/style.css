@@ -1,8 +1,6 @@
-/* Welcome to Compass.
- * In this file you should write your main styles. (or centralize your imports)
- * Import this file using the following HTML or equivalent:
- * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 @import url(../node_modules/normalize.css/normalize.css);
+@import url(../fonts/fonts.css);
+/*fonts*/
 /* Some Base CSS Rules */
 * {
   -webkit-box-sizing: border-box;
@@ -16,12 +14,513 @@ html, body {
   padding: 0; }
 
 body {
-  font-family: Arial, sans-serif; }
+  font-family: "ArnoPro-Display", sans-serif;
+  font-weight: 400; }
 
-.clearfix:after,
-.clearfix:before {
+.clearfix:after, .about__bottom:after,
+.clearfix:before,
+.about__bottom:before {
   display: table;
   content: " "; }
 
-.clearfix:after {
+.clearfix:after, .about__bottom:after {
   clear: both; }
+
+input:focus, a:focus, img:focus, textarea:focus {
+  outline: none; }
+
+.container {
+  width: 1000px;
+  margin: auto; }
+
+header {
+  background: #fff; }
+
+.header__top {
+  min-height: 62px;
+  border-bottom: 1px dotted #545454;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -moz-box-orient: horizontal;
+  -moz-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.header__name,
+.header__phone {
+  color: #5c5754;
+  font-size: 19px;
+  line-height: 32px;
+  border-right: 1px dotted #545454;
+  float: left; }
+
+.header__name {
+  padding-right: 24px; }
+
+.header__phone {
+  padding-right: 24px;
+  padding-left: 24px; }
+
+.header__search {
+  float: right;
+  position: relative; }
+  .header__search button {
+    width: 16px;
+    height: 16px;
+    display: block;
+    background: url(../img/search.png) 0 0 no-repeat;
+    background-size: contain;
+    border: none;
+    outline: none;
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    margin-top: -8px; }
+  .header__search .control {
+    padding-right: 35px; }
+
+.control {
+  height: 28px;
+  line-height: 31px;
+  -webkit-border-radius: 28px;
+  border-radius: 28px;
+  border: 1px solid #c4c4c4;
+  background: #fff;
+  padding: 0 15px; }
+
+.nav {
+  padding: 16px 0 13px; }
+
+.nav__list {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -moz-box-orient: horizontal;
+  -moz-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  list-style: none;
+  padding-left: 0;
+  margin: 0; }
+
+.nav__link {
+  color: black;
+  font-family: "oranienbaumRegular", sans-serif;
+  font-size: 16px;
+  line-height: 30px;
+  text-transform: uppercase;
+  text-decoration: none;
+  -webkit-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s; }
+  .nav__link:hover {
+    opacity: .8; }
+
+main {
+  background: url(../img/bg.jpg) 0 0 repeat;
+  padding: 77px 0 55px 0; }
+
+.about__top {
+  position: relative;
+  margin-bottom: 40px; }
+  .about__top:after {
+    content: '';
+    position: absolute;
+    display: block;
+    bottom: -30px;
+    left: 50%;
+    width: 169px;
+    height: 164px;
+    background: url(../img/chesnok.png) 0 0 no-repeat; }
+
+.about__slogan {
+  max-width: 560px;
+  float: left; }
+
+.about__ch1 {
+  max-width: 400px;
+  float: right;
+  position: relative;
+  top: 57px; }
+
+.about__bottom {
+  position: relative; }
+
+.ch3 {
+  position: absolute;
+  left: -67px;
+  top: 10px;
+  max-width: 490px;
+  z-index: 10; }
+
+.about__info {
+  float: right;
+  margin-right: -40px;
+  position: relative;
+  max-width: 700px; }
+  .about__info:before {
+    content: '';
+    position: absolute;
+    display: block;
+    top: -83px;
+    right: -50px;
+    width: 258px;
+    height: 251px;
+    background: url(../img/ch2.png) 0 0 no-repeat;
+    z-index: 10; }
+  .about__info:after {
+    content: '';
+    position: absolute;
+    display: block;
+    right: -84px;
+    bottom: -111px;
+    width: 280px;
+    height: 212px;
+    background: url(../img/ch4.png) 0 0 no-repeat; }
+
+.info {
+  background: url(../img/info-bg.jpg) 0 0 repeat;
+  padding: 15px; }
+
+.info__wrap {
+  border: 1px solid #bbb;
+  position: relative;
+  padding: 50px 55px 30px 80px; }
+  .info__wrap:before {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    right: 3px;
+    bottom: 3px;
+    border: 2px solid #bbb; }
+
+.info__title {
+  color: #5c5754;
+  font-family: "oranienbaumRegular", sans-serif;
+  font-size: 32px;
+  line-height: 30px;
+  text-transform: uppercase;
+  position: relative;
+  margin-bottom: 30px;
+  margin-left: -45px;
+  margin-top: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+  .info__title:after {
+    content: '';
+    background: url(../img/venzel.png) 0 0 no-repeat;
+    display: inline-block;
+    width: 32px;
+    height: 12px;
+    margin-left: 15px; }
+
+.info__text {
+  color: #5c5754;
+  font-family: Georgia, sans-serif;
+  font-size: 18px;
+  font-style: italic;
+  line-height: 32px;
+  margin-bottom: 35px; }
+
+.info_footer {
+  padding-top: 30px;
+  border-top: 1px solid #919191; }
+
+.section__title {
+  text-align: center;
+  margin-bottom: 30px; }
+  .section__title img {
+    display: inline-block; }
+
+.view {
+  padding-top: 100px; }
+
+.view_decor {
+  position: relative; }
+  .view_decor:before {
+    content: '';
+    position: absolute;
+    width: 166px;
+    height: 223px;
+    display: block;
+    left: -170px;
+    top: -186px;
+    background: url(../img/pom1.png) 0 0 no-repeat; }
+  .view_decor:after {
+    content: '';
+    position: absolute;
+    width: 119px;
+    height: 118px;
+    display: block;
+    right: -130px;
+    bottom: -26px;
+    background: url(../img/pom2.png) 0 0 no-repeat; }
+
+.view__row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-bottom: 40px; }
+
+.cheese {
+  width: 295px;
+  height: 397px;
+  padding: 12px;
+  -webkit-border-radius: 295px;
+  border-radius: 295px;
+  background: url(../img/view-bg.jpg) 0 0 repeat;
+  -webkit-box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.4);
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.4);
+  position: relative;
+  cursor: pointer;
+  overflow: hidden; }
+  .cheese:hover .cheese__hover {
+    top: 0; }
+
+.cheese__img {
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  overflow: hidden;
+  max-width: 100%;
+  margin-bottom: 18px;
+  position: relative;
+  width: 271px;
+  height: 271px; }
+  .cheese__img img {
+    max-width: 100%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%; }
+  .cheese__img:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    -webkit-box-shadow: inset 0 0 0 9px rgba(255, 255, 255, 0.5);
+    box-shadow: inset 0 0 0 9px rgba(255, 255, 255, 0.5); }
+
+.cheese__name {
+  font-family: "oranienbaumRegular", sans-serif;
+  font-size: 17px;
+  line-height: 25px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #84061a; }
+
+.cheese__hover {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #f2d881;
+  text-align: center;
+  padding: 100px 17px 17px 17px;
+  -webkit-transition: all .4s;
+  -o-transition: all .4s;
+  transition: all .4s;
+  -webkit-border-radius: 295px;
+  border-radius: 295px;
+  z-index: 10; }
+
+.cheese__hover-name {
+  color: #84061a;
+  font-family: "oranienbaumRegular", sans-serif;
+  font-size: 17px;
+  line-height: 25px;
+  text-transform: uppercase;
+  position: relative;
+  padding-bottom: 24px;
+  margin-bottom: 10px; }
+  .cheese__hover-name:after {
+    content: '';
+    position: absolute;
+    width: 44px;
+    height: 1px;
+    bottom: 0;
+    left: 50%;
+    margin-left: -22px;
+    background: #433021; }
+
+.cheese__info {
+  color: #433021;
+  font-size: 18px;
+  font-style: italic;
+  line-height: 22px; }
+
+.recipe {
+  padding-top: 50px;
+  padding-bottom: 130px; }
+
+.title-recipe {
+  position: relative; }
+  .title-recipe:after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    margin-left: -367px;
+    width: 97px;
+    height: 93px;
+    display: block;
+    background: url(../img/list.png) 0 0 no-repeat; }
+  .title-recipe:before {
+    content: '';
+    position: absolute;
+    bottom: -60px;
+    left: 50%;
+    margin-left: -290px;
+    width: 85px;
+    height: 82px;
+    display: block;
+    background: url(../img/sol.png) 0 0 no-repeat; }
+
+.recipe__wrap {
+  background: url(../img/recipe-bg.jpg) 0 0 repeat;
+  height: 215px;
+  position: relative;
+  margin-top: 105px; }
+  .recipe__wrap:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    margin-top: -220px;
+    left: 50%;
+    margin-left: -220px;
+    height: 440px;
+    width: 440px;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    background: url(../img/recipe-bg.jpg) 0 0 repeat; }
+
+.recipe__decor {
+  position: relative; }
+  .recipe__decor:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100px;
+    width: 123px;
+    height: 241px;
+    display: block;
+    background: url(../img/specii.png) 0 0 no-repeat; }
+  .recipe__decor:after {
+    content: '';
+    position: absolute;
+    top: -75px;
+    right: -193px;
+    width: 154px;
+    height: 363px;
+    display: block;
+    background: url(../img/klmn.png) 0 0 no-repeat; }
+  .recipe__decor .bx-wrapper {
+    margin: auto;
+    position: relative;
+    top: -35px;
+    left: 27px; }
+  .recipe__decor .bx-prev, .recipe__decor .bx-next {
+    position: absolute;
+    top: 118px; }
+  .recipe__decor .bx-prev {
+    left: -21px; }
+  .recipe__decor .bx-next {
+    right: 37px; }
+
+.bx-prev, .bx-next {
+  width: 46px;
+  height: 46px;
+  display: inline-block;
+  background-color: #eccb5e;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  -webkit-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s;
+  background-position: center center;
+  background-repeat: no-repeat; }
+  .bx-prev:hover, .bx-next:hover {
+    background-color: #b8182e; }
+
+.bx-prev {
+  background-image: url(../img/ico-dir.png);
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg); }
+
+.bx-next {
+  background-image: url(../img/ico-dir.png); }
+
+.recipe__img {
+  background: url(../img/recipe-decor.png) 0 0 no-repeat;
+  width: 354px;
+  height: 332px; }
+  .recipe__img img {
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    width: 222px;
+    height: 222px;
+    position: relative;
+    top: 25px;
+    left: 25px; }
+
+.recipe__info {
+  padding: 20px 20px;
+  color: #3c3c3c;
+  font-size: 20px;
+  line-height: 22px;
+  text-align: center;
+  position: relative;
+  width: 270px;
+  margin: 0 auto;
+  background: #fff;
+  top: -24px;
+  left: -30px; }
+  .recipe__info:before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    margin-left: -5px;
+    bottom: 100%;
+    border: 10px solid transparent;
+    border-bottom: 10px solid #fff; }

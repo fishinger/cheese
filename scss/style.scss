@@ -119,6 +119,10 @@ header{
 main{
 	background: url(../img/bg.jpg) 0 0 repeat;
 	padding: 77px 0 55px 0;
+	@media screen and(max-width: 1020px){
+		overflow-x: hidden;
+		padding: 77px 20px 55px 20px;
+	}
 }
 .about{
 	.container{
@@ -556,6 +560,14 @@ main{
 	}
 	.section__title{
 		margin-bottom: 43px;
+	}
+	@media screen and(max-width: 1020px){
+		.bx-prev{
+			left: 4px;
+		}
+		.bx-next{
+			right: 16px;
+		}
 	}
 }
 .news__decor{

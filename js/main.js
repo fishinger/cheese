@@ -16,7 +16,7 @@ $(document).ready(function(){
 
 	$('.slider1').bxSlider({
 		slideWidth: 354,
-		minSlides: 3,
+		minSlides: 1,
 		maxSlides: 3,
 		slideMargin: 5,
 		pager: false,
@@ -26,7 +26,7 @@ $(document).ready(function(){
 	});
 	$('.slider2').bxSlider({
 		slideWidth: 303,
-		minSlides: 3,
+		minSlides: 1,
 		maxSlides: 3,
 		slideMargin: 25,
 		pager: false,

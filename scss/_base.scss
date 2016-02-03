@@ -14,7 +14,9 @@ html, body {
 body {
 	font-family: $arno-display;
 	font-weight: 400;
+	padding-top: 121px;
 	//font-size: 62.5%;
+	min-width: 1280px;
 }
 
 .clearfix:after,

@@ -4,10 +4,12 @@
 	<meta charset="UTF-8">
 	<title>Document</title>
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/jquery.fancybox.css">
 	<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
 	<script type="text/javascript" src="js/parsley.min.js"></script>
 	<script type="text/javascript" src="js/jquery.bxslider.min.js"></script>
 	<script src="js/jquery.fancybox.pack.js"></script>
+	<script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
 	<!--[if lt IE 9]>
 	<script type="text/javascript" src="js/html5.js"></script>
 	<![endif]-->
@@ -33,19 +35,19 @@
 		<div class="nav">
 			<div class="container">
 				<ul class='nav__list'>
-					<li><a href="#" class='nav__link'>О компании</a></li>
-					<li><a href="#" class='nav__link'>Виды сыров</a></li>
-					<li><a href="#" class='nav__link'>Новости</a></li>
+					<li><a href="#about" class='nav__link'>О компании</a></li>
+					<li><a href="#view" class='nav__link'>Виды сыров</a></li>
+					<li><a href="#news" class='nav__link'>Новости</a></li>
 					<li><a href="#" class='nav__link'>Производство</a></li>
-					<li><a href="#" class='nav__link'>Рецепты</a></li>
-					<li><a href="#" class='nav__link'>Где купить</a></li>
+					<li><a href="#recipe" class='nav__link'>Рецепты</a></li>
+					<li><a href="#map" class='nav__link'>Где купить</a></li>
 				</ul>
 			</div>
 		</div>
 	</header>
 	<main>
 		<div class="container">
-			<div class="about section">
+			<div class="about section" data-section='about'>
 				<div class="about__top">
 					<img src="img/slogan.png" class='about__slogan' alt="">
 					<img src="img/ch1.png" class='about__ch1' alt="">
@@ -68,7 +70,7 @@
 			</div>
 		</div>
 		<div class="container">
-			<div class="view section">
+			<div class="view section" data-section='view'>
 				<div class="section__title">
 					<img src="img/title-view.png" alt="">
 				</div>
@@ -77,9 +79,9 @@
 						<div class="cheese__img">
 							<img src="img/view2.jpg" alt="">
 						</div>
-						<div class="cheese__name">МОЦАРЕЛЛА ДЛЯ ПИЦЦЫ</div>
+						<div class="cheese__name">МОЦАРЕЛЛА <br> ДЛЯ ПИЦЦЫ</div>
 						<div class="cheese__hover">
-							<div class="cheese__hover-name">МОЦАРЕЛЛА ДЛЯ ПИЦЦЫ</div>
+							<div class="cheese__hover-name">МОЦАРЕЛЛА <br> ДЛЯ ПИЦЦЫ</div>
 							<p class="cheese__info">
 								Моцарелла – это свежий сыр. 
 								Моцарелла относится к разряду особо полезных молочных продуктов.
@@ -90,9 +92,9 @@
 						<div class="cheese__img">
 							<img src="img/view2.jpg" alt="">
 						</div>
-						<div class="cheese__name">МОЦАРЕЛЛА ДЛЯ ПИЦЦЫ</div>
+						<div class="cheese__name">МОЦАРЕЛЛА <br> Классическая</div>
 						<div class="cheese__hover">
-							<div class="cheese__hover-name">МОЦАРЕЛЛА ДЛЯ ПИЦЦЫ</div>
+							<div class="cheese__hover-name">МОЦАРЕЛЛА <br> Классическая</div>
 							<p class="cheese__info">
 								Моцарелла – это свежий сыр. 
 								Моцарелла относится к разряду особо полезных молочных продуктов.
@@ -103,9 +105,9 @@
 						<div class="cheese__img">
 							<img src="img/view3.jpg" alt="">
 						</div>
-						<div class="cheese__name">МОЦАРЕЛЛА ДЛЯ ПИЦЦЫ</div>
+						<div class="cheese__name">МОЦАРЕЛЛА <br>  МАЛЕНЬКИЕ ШАРИКИ</div>
 						<div class="cheese__hover">
-							<div class="cheese__hover-name">МОЦАРЕЛЛА ДЛЯ ПИЦЦЫ</div>
+							<div class="cheese__hover-name">МОЦАРЕЛЛА <br>  МАЛЕНЬКИЕ ШАРИКИ</div>
 							<p class="cheese__info">
 								Моцарелла – это свежий сыр. 
 								Моцарелла относится к разряду особо полезных молочных продуктов.
@@ -118,9 +120,9 @@
 						<div class="cheese__img">
 							<img src="img/view4.jpg" alt="">
 						</div>
-						<div class="cheese__name">МОЦАРЕЛЛА ДЛЯ ПИЦЦЫ</div>
+						<div class="cheese__name">Рикотта</div>
 						<div class="cheese__hover">
-							<div class="cheese__hover-name">МОЦАРЕЛЛА ДЛЯ ПИЦЦЫ</div>
+							<div class="cheese__hover-name">Рикотта</div>
 							<p class="cheese__info">
 								Моцарелла – это свежий сыр. 
 								Моцарелла относится к разряду особо полезных молочных продуктов.
@@ -131,9 +133,9 @@
 						<div class="cheese__img">
 							<img src="img/view5.jpg" alt="">
 						</div>
-						<div class="cheese__name">МОЦАРЕЛЛА ДЛЯ ПИЦЦЫ</div>
+						<div class="cheese__name">Рикотта <br> Шоколадная</div>
 						<div class="cheese__hover">
-							<div class="cheese__hover-name">МОЦАРЕЛЛА ДЛЯ ПИЦЦЫ</div>
+							<div class="cheese__hover-name">Рикотта <br> Шоколадная</div>
 							<p class="cheese__info">
 								Моцарелла – это свежий сыр. 
 								Моцарелла относится к разряду особо полезных молочных продуктов.
@@ -156,8 +158,7 @@
 				</div>
 			</div>
 		</div>
-		
-		<div class="recipe section">
+		<div class="recipe section" data-section="recipe">
 			<div class="section__title title-recipe">
 				<img src="img/title-recipe.png" alt="">
 			</div>
@@ -212,8 +213,107 @@
 				</div>
 			</div>
 		</div>
+		<div class="container news section" data-section="news">
+			<div class="section__title">
+				<img src="img/title-news.png" alt="">
+			</div>
+			<div class="news__decor">
+				<div class="slider2 news__slider">
+					<div class="slide">
+						<div class="news__slide">
+							<div class="img-wrap">
+								<img src="img/news1.jpg" alt="">
+							</div>
+							<div class="news__date">23 декабря 2015</div>
+							<h3 class="news__name">Салат Капрезе Пирамида моцареллой</h3>
+							<p class="news__text">
+								Свежее натуральное сливочное масло - один из самых полезных и вкуснейших продуктов, исконно ценившихся на Руси.
+							</p>
+						</div>
+					</div>
+					<div class="slide">
+						<div class="news__slide">
+							<div class="img-wrap">
+								<img src="img/news2.jpg" alt="">
+							</div>
+							<div class="news__date">23 декабря 2015</div>
+							<h3 class="news__name">Салат Капрезе Пирамида моцареллой</h3>
+							<p class="news__text">
+								Свежее натуральное сливочное масло - один из самых полезных и вкуснейших продуктов, исконно ценившихся на Руси.
+							</p>
+						</div>
+					</div>
+					<div class="slide">
+						<div class="news__slide">
+							<div class="img-wrap">
+								<img src="img/news3.jpg" alt="">
+							</div>
+							<div class="news__date">23 декабря 2015</div>
+							<h3 class="news__name">Салат Капрезе Пирамида моцареллой</h3>
+							<p class="news__text">
+								Свежее натуральное сливочное масло - один из самых полезных и вкуснейших продуктов, исконно ценившихся на Руси.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 	</main>
-	
+	<footer class='map section' data-section='map'>
+		<!--<script type="text/javascript" charset="utf-8" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=0VJ0CsoVPk06qxwO79Z1iQuwMx-MV0t2&width=100%&height=514&lang=ru_RU&sourceType=constructor"></script> -->
+		<div class="balloon">
+			<div class="balloon__left">
+				<img src="img/map-logo.png"alt="">
+			</div>
+			<div class="balloon__right">
+				<ul class='balloon__list'>
+					<li>
+						Калужская область, 
+						фермерское хозяйство 
+						Кошманова
+					</li>
+					<li>
+						<a href="tel:+7823)7896321">+7 (823) 789 63 21</a>
+					</li>
+					<li>
+						<a href="mailto:Guberny@gmail.com">Guberny@gmail.com</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div id="map"></div>
+	</footer>
+	<a href='#popup-question' class="order open-popup">Заказать сыр</a>
+	<div class="popup popup-question" id="popup-question">
+		<div class="popup__decor">
+			<h2 class="popup__title">Задайте свой вопрос</h2>
+			<form action=""
+					data-parsley-validate 
+					data-parsley-required-message="Поле обязательно для заполнения"
+					data-parsley-trigger="focusout">
+				<div class="popup__row">
+					<div class="wrap-input">
+						<input type="text"
+								placeholder='Имя'
+								class='control_big'
+								data-parsley-required
+								>
+					</div>
+					<div class="wrap-input">
+						<input type="text"
+								placeholder='E-mail'
+								class='control_big'
+								data-parsley-required
+								data-parsley-type="email"
+								data-parsley-type-message="Email введен некорректно"
+								>
+					</div>
+				</div>
+				<textarea name="" placeholder='Ваше сообщение' class='textarea'></textarea>
+				<button type='submit' class='btn'>Отправить</button>
+			</form>
+		</div>
+	</div>
 	<script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>

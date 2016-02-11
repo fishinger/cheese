@@ -2,9 +2,9 @@
 <html lang="en" ng-app='app'>
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Document</title>
 	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="css/jquery.fancybox.css">
 	<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
 	<script type="text/javascript" src="js/parsley.min.js"></script>
 	<script type="text/javascript" src="js/jquery.bxslider.min.js"></script>
@@ -22,13 +22,17 @@
 	<header>
 		<div class="header__top">
 			<div class="container">
-				<div class="header__name">Калужская область, фермерское хозяйство Кошманова</div>
-				<div class="header__phone">+7 (823) 789 63 21</div>
-				<div class="header__search">
+				<div class="header__name hidden-xs">Калужская область, фермерское хозяйство Кошманова</div>
+				<div class="header__phone hidden-xs">+7 (823) 789 63 21</div>
+				<div class="header__search hidden-xs">
 					<form action="">
 						<input type="text" class='control'>
 						<button type='submit'></button>
 					</form>
+				</div>
+				<div class="header__mobile visible-xs">
+					<a href="#map" class="header__link-contact">Контакты</a>
+					<button class="header__btn-nav">Меню <i class="ico-menu"></i></button>
 				</div>
 			</div>
 		</div>
@@ -49,12 +53,14 @@
 		<div class="container">
 			<div class="about section" data-section='about'>
 				<div class="about__top">
-					<img src="img/slogan.png" class='about__slogan' alt="">
+					<img src="img/slogan.png" class='about__slogan hidden-xs' alt="">
+					<img src="img/about__slogan-xs.png" class='about__slogan about__slogan-xs' alt="">
 					<img src="img/ch1.png" class='about__ch1' alt="">
 					<div class="clearfix"></div>
 				</div>
 				<div class="about__bottom">
 					<img src="img/ch3.png" class='ch3' alt="">
+					<img src="img/ch3-xs.png" class='ch3 ch3-xs visible-xs' alt="">
 					<div class="info about__info">
 						<div class="info__wrap">
 							<h2 class="info__title">О компании</h2>
@@ -74,8 +80,8 @@
 				<div class="section__title">
 					<img src="img/title-view.png" alt="">
 				</div>
-				<div class="view__row">
-					<div class="view__item cheese">
+				<div class="view__row view_decor">
+					<div class="view__item item cheese">
 						<div class="cheese__img">
 							<img src="img/view2.jpg" alt="">
 						</div>
@@ -88,7 +94,7 @@
 							</p>
 						</div>
 					</div>
-					<div class="view__item cheese">
+					<div class="view__item item cheese">
 						<div class="cheese__img">
 							<img src="img/view2.jpg" alt="">
 						</div>
@@ -101,7 +107,7 @@
 							</p>
 						</div>
 					</div>
-					<div class="view__item cheese">
+					<div class="view__item item cheese">
 						<div class="cheese__img">
 							<img src="img/view3.jpg" alt="">
 						</div>
@@ -114,9 +120,7 @@
 							</p>
 						</div>
 					</div>
-				</div>
-				<div class="view__row view_decor">
-					<div class="view__item cheese">
+					<div class="view__item item cheese">
 						<div class="cheese__img">
 							<img src="img/view4.jpg" alt="">
 						</div>
@@ -129,7 +133,7 @@
 							</p>
 						</div>
 					</div>
-					<div class="view__item cheese">
+					<div class="view__item item cheese">
 						<div class="cheese__img">
 							<img src="img/view5.jpg" alt="">
 						</div>
@@ -142,7 +146,7 @@
 							</p>
 						</div>
 					</div>
-					<div class="view__item cheese">
+					<div class="view__item item cheese">
 						<div class="cheese__img">
 							<img src="img/view6.jpg" alt="">
 						</div>
@@ -156,6 +160,7 @@
 						</div>
 					</div>
 				</div>
+				<button class="btn-more">Показать еще виды сыра</button>
 			</div>
 		</div>
 		<div class="recipe section" data-section="recipe">
@@ -165,7 +170,7 @@
 			<div class="recipe__wrap">
 				<div class="container recipe__decor">
 					<div class="slider1">
-						<div class="slide">
+						<div class="slide item">
 							<div class="recipe__img">
 								<img src="img/recipe1.jpg" alt="">
 							</div>
@@ -173,7 +178,7 @@
 								Шоколадно-банановый пудинг с медовыми грушами
 							</div>
 						</div>
-						<div class="slide">
+						<div class="slide item">
 							<div class="recipe__img">
 								<img src="img/recipe2.jpg" alt="">
 							</div>
@@ -183,7 +188,7 @@
 								Unagrande
 							</div>
 						</div>
-						<div class="slide">
+						<div class="slide item">
 							<div class="recipe__img">
 								<img src="img/recipe3.jpg" alt="">
 							</div>
@@ -191,7 +196,7 @@
 								Шоколадно-банановый пудинг с медовыми грушами
 							</div>
 						</div>
-						<div class="slide">
+						<div class="slide item">
 							<div class="recipe__img">
 								<img src="img/recipe1.jpg" alt="">
 							</div>
@@ -199,7 +204,7 @@
 								Шоколадно-банановый пудинг с медовыми грушами
 							</div>
 						</div>
-						<div class="slide">
+						<div class="slide item">
 							<div class="recipe__img">
 								<img src="img/recipe2.jpg" alt="">
 							</div>
@@ -210,6 +215,7 @@
 							</div>
 						</div>
 					</div>
+					<button class="btn-more">Показать еще рецепты</button>
 				</div>
 			</div>
 		</div>
@@ -219,7 +225,7 @@
 			</div>
 			<div class="news__decor">
 				<div class="slider2 news__slider">
-					<div class="slide">
+					<div class="slide item">
 						<div class="news__slide">
 							<div class="img-wrap">
 								<img src="img/news1.jpg" alt="">
@@ -231,7 +237,7 @@
 							</p>
 						</div>
 					</div>
-					<div class="slide">
+					<div class="slide item">
 						<div class="news__slide">
 							<div class="img-wrap">
 								<img src="img/news2.jpg" alt="">
@@ -243,7 +249,7 @@
 							</p>
 						</div>
 					</div>
-					<div class="slide">
+					<div class="slide item">
 						<div class="news__slide">
 							<div class="img-wrap">
 								<img src="img/news3.jpg" alt="">
@@ -255,12 +261,36 @@
 							</p>
 						</div>
 					</div>
+					<div class="slide item">
+						<div class="news__slide">
+							<div class="img-wrap">
+								<img src="img/news1.jpg" alt="">
+							</div>
+							<div class="news__date">23 декабря 2015</div>
+							<h3 class="news__name">Салат Капрезе Пирамида моцареллой</h3>
+							<p class="news__text">
+								Свежее натуральное сливочное масло - один из самых полезных и вкуснейших продуктов, исконно ценившихся на Руси.
+							</p>
+						</div>
+					</div>
+					<div class="slide item">
+						<div class="news__slide">
+							<div class="img-wrap">
+								<img src="img/news2.jpg" alt="">
+							</div>
+							<div class="news__date">23 декабря 2015</div>
+							<h3 class="news__name">Салат Капрезе Пирамида моцареллой</h3>
+							<p class="news__text">
+								Свежее натуральное сливочное масло - один из самых полезных и вкуснейших продуктов, исконно ценившихся на Руси.
+							</p>
+						</div>
+					</div>
 				</div>
+				<button class="btn-more">Показать еще новости</button>
 			</div>
 		</div>
 	</main>
 	<footer class='map section' data-section='map'>
-		<!--<script type="text/javascript" charset="utf-8" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=0VJ0CsoVPk06qxwO79Z1iQuwMx-MV0t2&width=100%&height=514&lang=ru_RU&sourceType=constructor"></script> -->
 		<div class="balloon">
 			<div class="balloon__left">
 				<img src="img/map-logo.png"alt="">
@@ -284,6 +314,7 @@
 		<div id="map"></div>
 	</footer>
 	<a href='#popup-question' class="order open-popup">Заказать сыр</a>
+	<a href='#popup-question' class="order order-xs open-popup"></a>
 	<div class="popup popup-question" id="popup-question">
 		<div class="popup__decor">
 			<h2 class="popup__title">Задайте свой вопрос</h2>
@@ -312,6 +343,13 @@
 				<textarea name="" placeholder='Ваше сообщение' class='textarea'></textarea>
 				<button type='submit' class='btn'>Отправить</button>
 			</form>
+		</div>
+	</div>
+	<div class="popup popup-answer" id="popup-answer">
+		<div class="popup__decor">
+			<h2 class="popup__title">Ваш запрос отправлен</h2>
+			<div class="popup__text">В ближайшее время мы свяжемся с вами</div>
+			<button class='btn popup__close'>Закрыть</button>
 		</div>
 	</div>
 	<script type="text/javascript" src="js/main.js"></script>

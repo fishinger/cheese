@@ -16,7 +16,10 @@ body {
 	font-weight: 400;
 	padding-top: 121px;
 	//font-size: 62.5%;
-	min-width: 1000px;
+	//min-width: 1000px;
+	@media screen and($xs){
+		padding-top: 58px;
+	}
 }
 
 .clearfix:after,

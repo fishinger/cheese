@@ -99,17 +99,43 @@
 
 .fancybox-close {
 	position: absolute;
-	background: url(../img/popup-close.png);
+	background: 0 0;
 	top: -42px;
 	right: 0px;
 	width: 32px;
 	height: 32px;
 	cursor: pointer;
 	z-index: 8040;
-	
+	&:after{
+		content: '';
+		position: absolute;
+		display: block;
+		width: 1px;
+		height: 32px;
+		background: #fff;
+		transform: rotate(45deg) translateX(-50%);
+		left: 50%;
+		transition: all .3s;
+
+	}
+	&:before{
+		content: '';
+		position: absolute;
+		display: block;
+		width: 1px;
+		height: 32px;
+		background: #fff;
+		transform: rotate(-45deg) translateX(-50%);
+		left: 50%;
+		transition: all .3s;
+	}
 }
+
 .fancybox-close:hover{
 	opacity: 1;
+	&:after, &:before{
+		background: #ff556c;
+	}
 }
 
 .fancybox-nav {

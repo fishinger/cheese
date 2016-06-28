@@ -197,7 +197,7 @@ main{
 			right: 10%;
 		}
 	}
-	@media screen and($xs){
+	@media screen and($sm){
 		margin-bottom: 10px;
 		&:after{
 			display: none;
@@ -863,6 +863,9 @@ main{
 .map{
 	height: 514px;
 	position: relative;
+	@media screen and($xs){
+		height: 300px;
+	}
 }
 #map {
     width: 100%;
@@ -899,10 +902,7 @@ main{
 		margin-left: 0;
 	}
 	@media screen and($xs){
-		    transform: translateX(-50%) scale(0.7);
-		    top: auto;
-		    left: 52%;
-		    bottom: 0;
+		    display: none;
 	}
 }
 .balloon__left{
@@ -1232,4 +1232,86 @@ $color-ico-hover: #494949;
 	@media screen and($xs){
 		display: block;
 	}
+}
+
+.about__right{
+	overflow: hidden;
+	padding-bottom: 30px;
+	padding-right: 10px;
+}
+.card-cheese{
+	position: relative;
+	background: url(../img/info-bg.jpg) 0 0 repeat;
+	@extend .clearfix;
+	padding-left: 156px;
+	margin-bottom: 40px;
+	display: block;
+	text-decoration: none;
+	box-shadow: 5px 5px 5px rgba(0,0,0,.4);
+	&:hover{
+		text-decoration: none;
+	}
+	@media screen and($sm){
+		padding-left: 0;
+	}
+}
+.card-cheese__left{
+	position: absolute;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	width: 156px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	@media screen and($sm){
+		display: none;
+	}
+}
+.card-cheese__right{
+	padding: 15px;
+}
+.card-cheese__text{
+	margin-bottom: 10px;
+	a{
+		color: #3D80D6;
+	}
+}
+.card-cheese__btn{
+	height: 32px;
+	line-height: 32px;
+	padding: 0 20px;
+	background: #b7162c;
+	border: 2px solid #b7162c;
+	color: #fff;
+	text-align: center;
+	display: inline-block;
+	border-radius: 32px;
+	font-size: 17px;
+	text-transform: uppercase;
+	transition: all .3s;
+	cursor: pointer;
+	&:hover{
+		background: transparent;
+		color: #b7162c;
+	}
+}
+.card-soc{
+	padding: 25px;
+	background: url(../img/info-bg.jpg) 0 0 repeat;
+	position: relative;
+	box-shadow: 5px 5px 5px rgba(0,0,0,.4);
+	cursor: pointer;
+}
+.card-soc__text{
+	font-size: 17px;
+}
+.card-soc__ico{
+	position: absolute;
+	width: 95px;
+	height: 29px;
+	background: url(../img/soc-ico.png) 0 0 no-repeat;
+	right: 0;
+	top: 100%;
+	transform: translateY(-50%);
 }

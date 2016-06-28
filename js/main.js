@@ -47,10 +47,8 @@ $(document).ready(function(){
 			flagSlide = true;
 			console.log('aewewer');
 		} else if(winWidtn <= 640 && flagSlide) {
-			//sliders(1, 1);
 			slider1.destroySlider();
 			slider2.destroySlider();
-			//console.log(slider1)
 		}
 		if(slider1 && slider2 && winWidtn < 640){
 			slider1.destroySlider();
@@ -58,16 +56,8 @@ $(document).ready(function(){
 			flagSlide = false;
 		}
 	}
-	var destroySlid = function(){
-		var winWidtn = $(window).width();
-		if(slider1 && slider2 && winWidtn < 640){
-			
-		}
-	}
 	showSliders();
-	//destroySlid();
 	$(window).resize(function(){
-		//destroySlid();
 		showSliders();
 		moreItems();
 	})
